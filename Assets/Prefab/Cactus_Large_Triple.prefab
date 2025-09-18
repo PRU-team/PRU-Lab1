@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7365985087253804930}
   - component: {fileID: 916937207041712733}
   - component: {fileID: 3817591377028547675}
+  - component: {fileID: 1590610839083017385}
   m_Layer: 0
   m_Name: Cactus_Large_Triple
   m_TagString: Untagged
@@ -104,5 +105,17 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.5, y: 0.96, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5, y: 0.9769385, z: 0.2}
+  m_Center: {x: 0, y: 0.008469224, z: 0}
+--- !u!114 &1590610839083017385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4627962172706498445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973dbff6ead7eb245882a09eb7ff5e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

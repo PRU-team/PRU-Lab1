@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     {
         direction += Vector3.down * gravity * Time.deltaTime;
 
-        if(character.isGrounded && direction.y < 0)
+        if (character.isGrounded && direction.y < 0)
         {
             direction = Vector3.down;
 
@@ -33,5 +33,13 @@ public class Player : MonoBehaviour
         }
 
         character.Move(direction * Time.deltaTime);
+    }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 }

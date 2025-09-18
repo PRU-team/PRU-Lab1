@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4478552099875506730}
   - component: {fileID: 744068434679957654}
   - component: {fileID: 1699094597917381834}
+  - component: {fileID: 5356389580077284699}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Obstacle
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b692014f2f337d446b57fe898c69aefe, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 980551d30b461fe4996e07e52aacdeb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,3 +123,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9488544, y: 0.9888543, z: 0.2}
   m_Center: {x: 0.014427185, y: -0.014427185, z: 0}
+--- !u!114 &5356389580077284699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762102480300102260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973dbff6ead7eb245882a09eb7ff5e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
