@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public float initialGameSpeed = 5f;
     public float gameSpeedIncrease = 0.1f;
     public float gameSpeed { get; private set; }
-
+    public TMP_Text totalCoinText;  // TextMeshPro text
+    private int totalCoins;
     private Player player;
     private Spawner spawner;
     private void Awake()
@@ -48,7 +49,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(obstacle.gameObject);
         }
-        
+        totalCoins = 0;
+        UpdateCoinUI();
         gameSpeed = initialGameSpeed;
         enabled = true;
 
@@ -70,5 +72,15 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         gameSpeed += gameSpeedIncrease * Time.deltaTime;
+    }
+    public void AddCoin(int amount = 1)
+    {
+        totalCoins += amount;
+        UpdateCoinUI();
+    }
+    private void UpdateCoinUI()
+    {
+        if (totalCoinText != null)
+            totalCoinText.text = totalCoins.ToString();
     }
 }

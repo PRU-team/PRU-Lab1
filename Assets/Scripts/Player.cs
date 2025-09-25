@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -40,6 +40,11 @@ public class Player : MonoBehaviour
         if (other.CompareTag("Obstacle"))
         {
             GameManager.Instance.GameOver();
+        }
+        else if (other.CompareTag("Collectible"))
+        {
+            //GameManager.Instance.AddScore(1); // hoặc gọi hàm tăng điểm
+            Destroy(other.gameObject);        // biến mất sau khi nhặt
         }
     }
 }
